@@ -1,4 +1,4 @@
-import Title from '../assets/Title.icon.png'
+import Title from '../assets/icons8-r-100.png'
 import Twitter from '../assets/twitter-alt.png'
 import Linkedin from '../assets/linkedin.png'
 import gitHub from '../assets/github.png'
@@ -10,7 +10,6 @@ function NavBar(props) {
       <div className="wraper">
         <div className="title-container">
           <img className='' src={Title} alt="Titel" />
-          <h2>RAJU</h2>
         </div>
         <div className='about'>
             <a onClick={props.handleClick}className='navLink' href="#projects">Project</a><span></span>

@@ -28,8 +28,9 @@ header {
 
 .title-container img {
   height: 50px;
-  filter: invert(17%) sepia(24%) saturate(401%) hue-rotate(193deg) brightness(94%) contrast(90%);
 
+  
+    /* Rotates image by 45 degrees */
 }
 
 .title-container {
@@ -136,6 +137,12 @@ section {
 .dev-name h1 {
   font-size: 3rem;
   color: goldenrod;
+}
+.dev-name p{
+  text-align: center;
+}
+.typing p{
+  text-align: center;
 }
 .img-section{
     margin: auto;

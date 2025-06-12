@@ -102,7 +102,8 @@ function App() {
     />
     <section>
       <div className='dev-name'>
-        <h1>Hey I AM RAJU</h1>
+          <h1>Raju | Frontend Developer </h1>
+          <p>I build clean, interactive UIs using React and JavaScript.</p>
         <div className='typing'>
             <p>{showWord}</p><span className="line"></span>
         </div>
