@@ -1,4 +1,4 @@
-import Title from '../assets/Title icon.png'
+import Title from '../assets/Title.icon.png'
 import Twitter from '../assets/twitter-alt.png'
 import Linkedin from '../assets/linkedin.png'
 import gitHub from '../assets/gitHub.png'
@@ -26,7 +26,6 @@ function NavBar(props) {
       </div>
         <div className='divider'></div>
     </header>
-  
     </>
   );
 }
