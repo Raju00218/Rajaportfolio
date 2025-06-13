@@ -1,39 +1,44 @@
-const ContactForm = (props) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
+import { useState } from "react";
+const ContactForm = () => {
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("")
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(form)).toString(),
-    })
-      .then(() => alert("Message sent successfully!"))
-      .catch((error) => alert("Error: " + error));
+
+
+  const handleSendClick = () => {
+    const yourEmail = "rajualaveni7893@gmail.com"; // your email
+    const subject = "Message from Portfolio";
+    const body = encodeURIComponent(`Hi Raju,\n\nMy name is ${name}.\n\n${message}`); // escape special characters
+
+    const mailtoLink = `mailto:${yourEmail}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink; // this opens the mail client
   };
 
+
+
   return (
-    <form
-      className="form"
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      onSubmit={handleSubmit}
-      netlify-honeypot="bot-field" // Optional spam filter
-      ref={props.ref}
-    >
-      <input type="hidden" name="form-name" value="contact" /> {/* Required for Netlify */}
-      <p hidden>
-        <label>Don’t fill this out: <input name="bot-field" /></label>
-      </p>
+    <div
+      className="form">
+        <div className="title">Contact us</div>
+      <input type="text" placeholder="Raju Alabeni" className="input" name="name" required disabled />
+      <input type="email" placeholder="rajualaveni7893@gmail.com" name="email" required disabled />
+      <input 
+      type="text" 
+      placeholder="Your Name" 
+      value={name}
+      onChange={(e) => setName(e.target.value)} 
+      required />
+      <textarea 
+      value={message} 
+      placeholder="Your message" 
+      required
+      onChange={(e) => setMessage(e.target.value)}
+      >  
+      </textarea>
 
-      <div className="title">Contact us</div>
-      <input type="text" placeholder="Your name" className="input" name="name" required />
-      <input type="email" placeholder="Your email" className="input" name="email" required />
-      <textarea name="message" placeholder="Your message" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
+      <button onClick={handleSendClick}>Submit</button>
+    </div>
   );
 };
 

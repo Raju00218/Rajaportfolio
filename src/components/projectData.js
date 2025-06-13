@@ -29,7 +29,7 @@ export default[
     {
         id: 4,
         title: "Cristamas list app",
-        description: "Cristam app using JavaScript, HTML, and CSS! It's a clean and minimal solution where users can add items, eliminate duplicates automatically, and easily delete any entry. Focused on writing efficient logic to manage dynamic user inputs while keeping the UI intuitive",
+        description: "Cristam It's a clean and minimal solution where users can add items, eliminate duplicates automatically, and easily delete any entry. Focused on writing efficient logic to manage dynamic user inputs while keeping the UI intuitive",
         techStack: " React, JavaScript, CSS",
         imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749483287/Screenshot_2025-06-09_210408_ppjhwg.png",
         applink: "https://cristamaswishlist.netlify.app/"
@@ -38,9 +38,9 @@ export default[
     {
         id: 5,
         title: "🗞️ TodayNews – News Aggregator",
-        description: "Developed a clean, responsive news app that fetches real-time top headlines from the News API. Users can browse categorized news, view images, and stay updated with the latest stories through a simple, modern UI.",
+        description: "Developed a clean, responsive news app that fetches real-time top headlines from the News API, view images, and stay updated with the latest stories through a simple, modern UI.",
         techStack: "🛠 React, JavaScript, CSS,News API",
-        imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749713717/news-websites_rrgbex.webp",
+        imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749797170/ChatGPT_Image_Jun_13_2025_12_15_17_PM_mwnwiu.png",
         applink: "https://newstodaynet.netlify.app/"
 
     },

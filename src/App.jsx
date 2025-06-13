@@ -11,7 +11,6 @@ import Resume from './assets/Raju_Resume_PDF.pdf'
 
 
 
-
 function App() {
   const [showWord, setShowWord] = useState("")
   const [wordIndex, setWordIndex] = useState(0);
@@ -85,6 +84,7 @@ function App() {
       title={project.title}
       description={project.description}
       applink={project.applink}
+      techStack={project.techStack}
 
       />)
   },[Data])
@@ -102,7 +102,7 @@ function App() {
     />
     <section>
       <div className='dev-name'>
-          <h1>Raju | Frontend Developer </h1>
+          <h1> Hey I Am Raju | Frontend Developer </h1>
           <p>I build clean, interactive UIs using React and JavaScript.</p>
         <div className='typing'>
             <p>{showWord}</p><span className="line"></span>

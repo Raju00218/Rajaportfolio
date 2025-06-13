@@ -3,9 +3,11 @@ function profileBio(props) {
     <div className="bio-container">
         <div ref={props.ref} className="bio">
               <h2>✨ About me</h2>
-        <p>💬 About Me
-          Hi, I’m Raju — a self-taught frontend developer with a passion for clean UI and functional web apps.
-          I’m currently learning React, building projects, and aiming for my first IT role.</p>
+        <p>
+          I'm a self-taught frontend developer with a strong foundation in JavaScript, React, and modern web practices. 
+          I’ve built multiple live projects, including an AI recipe generator and a real-time news app. 
+          I'm currently looking for opportunities to contribute to a fast-paced dev team and grow in a professional IT environment.
+        </p>
         </div>
     </div>
   );
