@@ -1,5 +1,5 @@
 import { useState } from "react";
-const ContactForm = () => {
+const ContactForm = ({ref}) => {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("")
 
@@ -18,8 +18,7 @@ const ContactForm = () => {
 
 
   return (
-    <div
-      className="form">
+    <div ref={ref} className="form">
         <div className="title">Contact us</div>
       <input type="text" placeholder="Raju Alabeni" className="input" name="name" required disabled />
       <input type="email" placeholder="rajualaveni7893@gmail.com" name="email" required disabled />
