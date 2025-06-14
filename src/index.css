@@ -96,7 +96,7 @@ header {
 .about a {
   color: aliceblue;
   text-decoration: none;
-  font-size: clamp(.7rem, 1.3vw, 1.9rem);
+  font-size: clamp(.7rem, 1.1vw, 1rem);
 }
 
  .about a {
@@ -531,4 +531,33 @@ letter-spacing: 1px;
   text-align: center;
   padding: 10px;
   border-top: 1px solid rgb(39, 43, 44);
+}
+
+/* For the entire scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  /* vertical */
+  height: 8px;
+  /* horizontal */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 10px;
+}
+
+/* Thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background: #7161ef;
+  border-radius: 10px;
+  border: 2px solid #1e1e1e;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6fffe9;
+}
+.page{
+  padding: 10px;
 }

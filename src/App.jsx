@@ -100,34 +100,36 @@ function App() {
     clickEvent={resumeHandle}
     contact={contactHandle}
     />
-    <section>
-      <div className='dev-name'>
-          <h1> Hey I Am Raju | Frontend Developer </h1>
-          <p>I build clean, interactive UIs using React and JavaScript.</p>
-        <div className='typing'>
-            <p>{showWord}</p><span className="line"></span>
-        </div>
-      </div>
-    </section>
+<div className='page'>
+        <section>
+          <div className='dev-name'>
+            <h1> Hey I Am Raju | Frontend Developer </h1>
+            <p>I build clean, interactive UIs using React and JavaScript.</p>
+            <div className='typing'>
+              <p>{showWord}</p><span className="line"></span>
+            </div>
+          </div>
+        </section>
         <ClipathImage />
-      <About
-      ref={bioRef}
-      />
-     <section className='sec-prj'>
-        <div className='lable'> <h2>🎉Project</h2></div>
-        <div ref={projectRef} className='card-container'>{work}</div>
-     </section>
-     <div ref={resumeRef}className='resume-container'>
-      <h2>📑Resume</h2>
-        <p>Download the Resume here   or   View the Resume</p>
-      <div className='button'>
-          <a href={Resume} download><button>Download Resume </button></a>
-        <button onClick={handleView}> View Resume</button>
-      </div>
-     </div>
-     <Form 
-     ref={contactref}
-     />
+        <About
+          ref={bioRef}
+        />
+        <section className='sec-prj'>
+          <div className='lable'> <h2>🎉Project</h2></div>
+          <div ref={projectRef} className='card-container'>{work}</div>
+        </section>
+        <div ref={resumeRef} className='resume-container'>
+          <h2>📑Resume</h2>
+          <p>Download the Resume here   or   View the Resume</p>
+          <div className='button'>
+            <a href={Resume} download><button>Download Resume </button></a>
+            <button onClick={handleView}> View Resume</button>
+          </div>
+        </div>
+        <Form
+          ref={contactref}
+        />
+</div>
      <Footer/>
 
     </>
