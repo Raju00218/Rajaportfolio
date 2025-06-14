@@ -88,13 +88,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+  max-width: 360px;
 
 }
 
 .about a {
   color: aliceblue;
   text-decoration: none;
+  font-size: clamp(.7rem, 1.3vw, 1.9rem);
 }
 
  .about a {
