@@ -164,6 +164,7 @@ section {
   display: flex;
   text-align: left;
   align-items: center;
+  min-height: 60px;
 }
 
 .dev-name {

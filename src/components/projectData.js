@@ -50,7 +50,7 @@ export default[
         description: "Created a classic Tic Tac Toe game where two players take turns marking X or O on a 3×3 grid. The app handles win/loss detection, draws, and board resets with smooth DOM interaction and minimal UI.",
         techStack:"🛠 JavaScript, HTML, CSS",
         imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749713422/tic_tak_toe_hw304p.png",
-        applink: "https://cristamaswishlist.netlify.app/"
+        applink: "https://tictactoe118.netlify.app/"
 
     }
 ]

@@ -122,7 +122,7 @@ function App() {
           <h2>📑Resume</h2>
           <p>Download the Resume here   or   View the Resume</p>
           <div className='button'>
-            <a href={Resume} download><button>Download Resume </button></a>
+            <a href={Resume} download><button data-id="downloadResume">Download Resume </button></a>
             <button onClick={handleView}> View Resume</button>
           </div>
         </div>
