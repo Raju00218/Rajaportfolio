@@ -52,6 +52,7 @@ export default[
         imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749713422/tic_tak_toe_hw304p.png",
         applink: "https://tictactoe118.netlify.app/"
 
+
     },
     {
         id: 7,
@@ -61,4 +62,14 @@ export default[
         applink: "https://tictactoe118.netlify.app/"
 
     },
+    {
+        id: 7,
+        title: "E-commerce",
+        description: "A simple e-commerce site with product listings, search, and a shopping cart. Users can add/remove items from the cart and view the total price.",
+        techStack: "🛠 React, JavaScript, HTML, CSS",
+        imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1760426470/Screenshot_2025-10-14_125048_ljcnmi.png",
+        applink: "https://shoppinghubi.netlify.app/"
+
+    }
+
 ]

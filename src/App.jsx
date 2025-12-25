@@ -7,6 +7,7 @@ import Data from './components/projectData.js'
 import About from './components/bio.jsx'
 import Form from './components/form.jsx'
 import Footer from './components/footer.jsx'
+import Resume from './assets/raju_resume_24.pdf' 
 
 
 function App() {
