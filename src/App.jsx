@@ -7,7 +7,6 @@ import Data from './components/projectData.js'
 import About from './components/bio.jsx'
 import Form from './components/form.jsx'
 import Footer from './components/footer.jsx'
-import Resume from './assets/Raju_Resume.pdf
 
 
 function App() {
@@ -87,6 +86,7 @@ function App() {
 
       />)
   },[Data])
+
   const handleView =(()=>{
     window.open(Resume, "_blank")
   })

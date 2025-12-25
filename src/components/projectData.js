@@ -52,5 +52,13 @@ export default[
         imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749713422/tic_tak_toe_hw304p.png",
         applink: "https://tictactoe118.netlify.app/"
 
-    }
+    },
+    {
+        id: 7,
+        title: "Ecommers website",
+        description: "Developed a responsive e-commerce website with product listings, search functionality, and a shopping cart. Implemented dynamic filtering and sorting to enhance user experience.",
+        imgUrl: "https://res.cloudinary.com/dukqtsyt9/image/upload/v1749799071/Screenshot_2025-06-11_001349_mr4m3u.png",
+        applink: "https://tictactoe118.netlify.app/"
+
+    },
 ]
