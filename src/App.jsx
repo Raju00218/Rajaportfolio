@@ -1,52 +1,27 @@
-import { useState,useEffect,useRef,useMemo} from 'react'
+import { useState,useRef,useMemo} from 'react'
 import NavBar from './components/nav'
 import './App.css'
-import ClipathImage from './Clippath.jsx'
 import Projects from './components/Project.jsx'
 import Data from './components/projectData.js'
-import About from './components/bio.jsx'
 import Form from './components/form.jsx'
 import Footer from './components/footer.jsx'
 import Resume from './assets/raju_resume_24.pdf' 
+import ProjectCard from './components/Cards.jsx'
 
 
 function App() {
-  const [showWord, setShowWord] = useState("")
-  const [wordIndex, setWordIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
+
   const projectRef =useRef(null)
   const bioRef = useRef(null)
   const resumeRef = useRef(null)
   const contactref = useRef(null)
   const words = ["I Am Software developer", "I Build web application", "I love Scripting language",]
 
-  useEffect(() => {
-
-    const currentWord = words[wordIndex % words.length]; // use modulo to loop words
-
-    if (charIndex < currentWord.length) {
-      const typing = setTimeout(() => {
-        setShowWord(prev => prev + currentWord[charIndex]);
-        setCharIndex(prev => prev + 1);
-      }, 100);
-
-      return () => clearTimeout(typing); // ✅ clear the timeout on cleanup
-    } else {
-      const pause = setTimeout(() => {
-        setShowWord(""); // clear word
-        setCharIndex(0); // reset to first character
-        setWordIndex(prev => (prev + 1) % words.length); // move to next word
-      }, 1000);
-
-      return () => clearTimeout(pause); // ✅ clear pause if effect runs again
-    }
-  }, [charIndex, wordIndex]);
-
 
   function handleClick(){
     const element = projectRef.current;
     if (element) {
-      const yOffset = -180; // adjust based on your nav height
+      const yOffset = -80; // adjust based on your nav height
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -76,14 +51,15 @@ function App() {
     }
   }
   const work = useMemo(()=>{
-    return Data.map((project)=> <Projects
+    return Data.map((project) => <ProjectCard
     key={project.id}
       id={project.id}
-      image={project.imgUrl}
+      github={project.githubLink}
       title={project.title}
       description={project.description}
       applink={project.applink}
       techStack={project.techStack}
+      iconName={project.icon}
 
       />)
   },[Data])
@@ -103,23 +79,27 @@ function App() {
 <div className='page'>
         <section>
           <div className='dev-name'>
-            <h1> Hey I Am Raju | Frontend Developer </h1>
-            <p>I build clean, interactive UIs using React and JavaScript.</p>
-            <div className='typing'>
-              <p>{showWord}</p><span className="line"></span>
-            </div>
+            <p className='her-intro' ref={bioRef} >Hi, my name is</p>
+            <h1>Raju.</h1>
+            <h2 className='i-do'>I build things for the web.</h2>
+            <p className='hero-intro2' >
+              I’m a full‑stack software engineer who builds accessible, 
+              human‑centered digital products. and I thrive on solving complex problems, 
+              designing clean interfaces, and deploying scalable applications that deliver exceptional user experiences.
+            </p>
           </div>
         </section>
-        <ClipathImage />
-        <About
-          ref={bioRef}
-        />
-        <section className='sec-prj'>
-          <div className='lable'> <h2>🎉Project</h2></div>
-          <div ref={projectRef} className='card-container'>{work}</div>
-        </section>
+          <Projects 
+          ref={projectRef} />
+        <div className="project-cards-container">
+          {work}
+        </div>
+        <div className="project-start">
+          <span className="span-1">02.</span>
+          <h3 >Resume</h3>
+          <div className="start-divider"></div>
+        </div>
         <div ref={resumeRef} className='resume-container'>
-          <h2>📑Resume</h2>
           <p>Download the Resume here   or   View the Resume</p>
           <div className='button'>
             <a href={Resume} download><button data-id="downloadResume">Download Resume </button></a>
@@ -130,6 +110,7 @@ function App() {
           ref={contactref}
         />
 </div>
+
      <Footer/>
 
     </>

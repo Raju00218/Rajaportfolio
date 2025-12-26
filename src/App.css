@@ -1,0 +1,189 @@
+.project-cards-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 2rem;
+    margin:auto;
+    /* width: 70%; */
+    margin-bottom: 30px;
+}
+@media (max-width :768px) {
+    .project-cards-container{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+            gap: 10px;
+            margin-top: 2rem;
+        
+            margin: 0 auto;
+            width: 100%;
+    }
+    
+}
+@media (min-width: 1100px) {
+    .project-cards-container{
+        width: 70%;
+    }
+    }
+.project-cards {
+    position: relative;
+    background-color: #1e293b80;
+    padding: 20px;
+    /* p-8 */
+    border-radius: 0.25rem;
+    /* rounded */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+
+    /* Flexbox column layout often helps with 'mt-auto' on the footer */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect on the card itself */
+.project-cards:hover {
+    transform: translateY(-0.5rem);
+    /* -translate-y-2 */
+}
+.project-cards:hover .card-overlay{
+    display: none;
+}
+.card-overlay {
+    position: absolute;
+    /* absolute */
+    top: 0;
+    /* inset-0 → top:0, right:0, bottom:0, left:0 */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(67, 72, 71, 0.155);
+    /* bg-teal-900/30 → teal-900 (#0f766e) at 30% opacity */
+    mix-blend-mode: multiply;
+    /* mix-blend-multiply */
+    /* transition: all 0.3s; */
+
+    /* transition-all duration-300 */
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    /* mb-8 */
+}
+.folder-icon{
+color: #38b2ac;
+}
+.project-cards:hover .project-title {
+    color: #38b2ac; 
+}
+
+.external-links {
+    display: flex;
+    gap: 1rem;
+}
+.external-links a{
+    color: #94a3b8;
+    cursor: pointer;
+}
+.social-icon:hover{
+    color:#38b2ac;
+}
+
+
+.project-title {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 700;
+    /* font-bold */
+    color: var(--slate-100);
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+    margin-top: 0;
+    transition: color 0.3s ease;
+}
+
+/* Replicating 'group-hover':
+  When .project-card is hovered, change .project-title color 
+*/
+.project-card:hover .project-title {
+    color: var(--teal-400);
+}
+
+.project-description {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    /* text-sm */
+    margin-bottom: 1.5rem;
+    /* mb-6 */
+    line-height: 1.5;
+}
+
+.card-tech-stack {
+    width: 100%;
+    display: flex;
+    gap: 0.75rem;
+    /* gap-3 */
+    font-size: 0.75rem;
+    /* text-xs */
+    font-family: monospace;
+    /* font-mono */
+    color: var(--slate-500);
+    margin-top: auto;
+    /* Pushes list to bottom if card has fixed height */
+    list-style: none;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+.app-footer {
+    margin-top: 8rem;
+    /* mt-32 */
+    text-align: center;
+    /* text-center */
+    color: var(--slate-500);
+    /* text-slate-500 */
+    font-size: 0.875rem;
+    /* text-sm */
+    font-family: monospace;
+    /* font-mono */
+    padding-bottom: 2rem;
+    /* pb-8 */
+}
+
+.footer-credit {
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+}
+
+.footer-social {
+    display: flex;
+    /* flex */
+    justify-content: center;
+    /* justify-center */
+    align-items: center;
+    /* vertical alignment fix */
+    gap: 1rem;
+    /* gap-4 */
+    color: var(--slate-400);
+    /* text-slate-400 */
+}
+
+.social-link {
+    cursor: pointer;
+    /* cursor-pointer */
+    transition: color 0.2s ease;
+}
+
+.footer-social span{
+    border: none;
+}
+.social-link:hover {
+    color: #38b2ac;
+    /* hover:text-teal-400 */
+}
