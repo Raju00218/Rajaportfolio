@@ -15,8 +15,7 @@ function App() {
   const bioRef = useRef(null)
   const resumeRef = useRef(null)
   const contactref = useRef(null)
-  const words = ["I Am Software developer", "I Build web application", "I love Scripting language",]
-
+ 
 
   function handleClick(){
     const element = projectRef.current;
@@ -102,7 +101,8 @@ function App() {
         <div ref={resumeRef} className='resume-container'>
           <p>Download the Resume here   or   View the Resume</p>
           <div className='button'>
-            <a href={Resume} download><button data-id="downloadResume">Download Resume </button></a>
+            <a href={Resume} download><button data-id="downloadResume" onclick="gtag('event', 'resume_download');">Download Resume </button></a>
+            
             <button onClick={handleView}> View Resume</button>
           </div>
         </div>
